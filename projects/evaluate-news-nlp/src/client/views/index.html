@@ -19,19 +19,20 @@
         <main>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="textInput" type="text" name="input" value="" placeholder="Enter Text">
+                    <input id="textInput" type="url" name="input" value="" placeholder="Enter Url">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
                 </form>
             <section>
 
             <section>
                 <strong>Form Results:</strong>
-                <!-- <div id="results"></div> -->
-                <div id="results2"></div>
-                <div id="results3"></div>
-                <div id="results4"></div>
-                <div id="results5"></div>
-                <div id="results6"></div>
+                <div id="Agreement"></div>
+                <div id="Confidence"></div>
+                <div id="Irony"></div>
+                <div id="Model"></div>
+                <div id="Score_tag"></div>
+                <div id="Subjectivity"></div>
+                <div id="Error"></div>
             </section>
         </main>
 
@@ -45,7 +46,9 @@
                 window.addEventListener('load', () => {
                     navigator.serviceWorker.register('/service-worker.js');
                 });
+            } else {
+                console.log("Service Worker not registered", error);
             }
-           </script>
+        </script>
     </body>
 </html>
