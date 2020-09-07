@@ -19,8 +19,8 @@
         <main>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="textInput" type="url" name="input" value="" placeholder="Enter Url">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                    <input id="textInput" type="url" name="input" value="" placeholder="https://example.com" required>
+                    <input type="submit" name="" value="submit">
                 </form>
             <section>
 
@@ -42,12 +42,10 @@
         <script>
             // Check that service workers are supported
             if ('serviceWorker' in navigator) {
-                // Use the window load event to keep the page load performant
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js');
-                });
-            } else {
-                console.log("Service Worker not registered", error);
+              // Use the window load event to keep the page load performant
+              window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+              });
             }
         </script>
     </body>
